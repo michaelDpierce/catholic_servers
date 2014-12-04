@@ -1,2 +1,13 @@
-<td><%= link_to user.name, user %></td>
-<td><%= link_to user.email, user %></td>
+<td><%= user.id %>
+<td><%= user.first_name %>
+<td><%= user.last_name %>
+
+<td><%= link_to user.first_name, user.first_name %></td>
+<td><%= link_to user.last_name, user.last_name %></td>
+<td><%= link_to user.email, user.email %></td>
+<td><%= link_to user.primary_phone, user.primary_phone %></td>
+<td><%= link_to user.primary_phone_type, user.primary_phone_type %></td>
+<td><%= link_to user.secondary_phone, user.secondary_phone %></td>
+<td><%= link_to user.secondary_phone_type, user.secondary_phone_type %></td>
+<td><%= link_to user.secondary_email, user.secondary_email %></td>
+<td><%= link_to user.address, user.address %></td>
