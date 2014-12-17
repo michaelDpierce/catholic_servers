@@ -10,6 +10,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'devise'
 gem 'jquery-turbolinks'
+gem 'newrelic_rpm'
 
 # Front End
 gem 'sass-rails', '~> 4.0.3'
