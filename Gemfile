@@ -11,6 +11,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'devise'
 gem 'jquery-turbolinks'
 gem 'newrelic_rpm'
+gem 'mysql2'
 
 # Front End
 gem 'sass-rails', '~> 4.0.3'

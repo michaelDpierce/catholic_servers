@@ -100,6 +100,7 @@ GEM
     mini_portile (0.6.0)
     minitest (5.4.2)
     multi_json (1.10.1)
+    mysql2 (0.3.17)
     newrelic_rpm (3.9.1.236)
     nokogiri (1.6.3.1)
       mini_portile (= 0.6.0)
@@ -210,6 +211,7 @@ DEPENDENCIES
   jquery-rails
   jquery-turbolinks
   launchy
+  mysql2
   newrelic_rpm
   pg
   quiet_assets

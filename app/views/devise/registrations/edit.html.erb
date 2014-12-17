@@ -16,6 +16,55 @@
   <div><%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
 
+  <div><%= f.label :first_name %><br />
+    <%= f.text_field :first_name %></div>
+
+  <div><%= f.label :last_name %><br />
+    <%= f.text_field :last_name %></div>
+
+  <div><%= f.label :primary_phone %><br />
+    <%= f.text_field :primary_phone %></div>
+
+  <div><%= f.label :primary_phone_type %><br />
+    <%= f.select :primary_phone_type, ['Home','Cell','Work'], include_blank: true %></div>
+
+  <div><%= f.label :secondary_phone %><br />
+    <%= f.text_field :secondary_phone %></div>
+
+  <div><%= f.label :secondary_phone_type %><br />
+    <%= f.select :secondary_phone_type, ['Home','Cell','Work'], include_blank: true%></div>
+
+  <div><%= f.label :secondary_email %><br />
+    <%= f.email_field :secondary_email %></div>
+
+  <div><%= f.label :address_1 %><br />
+    <%= f.text_field :address_1 %></div>
+
+  <div><%= f.label :address_2 %><br />
+    <%= f.text_field :address_2 %></div>
+
+  <div><%= f.label :city %><br />
+    <%= f.text_field :city %></div>
+
+  <div><%= f.label :state %><br />
+    <%= f.text_field :state %></div>
+
+  <div><%= f.label :zip %><br />
+    <%= f.text_field :zip %></div>
+
+    <div><label>Parish</label><br />
+  <%= f.select(:parish_id, Parish.all.collect {|p| [p.name, p.id]}, prompt: true) %>
+
+
+
+
+
+
+
+
+
+
+
   <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "off" %></div>
 
@@ -27,3 +76,13 @@
 <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
 <%= link_to "Back", :back %>
+
+
+
+<!--
+
+t.string   "primary_phone_type"
+
+t.string   "secondary_phone_type"
+
+t.integer  "parish_id" -->
