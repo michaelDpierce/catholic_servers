@@ -1,45 +1,65 @@
-<%= bootstrap_form_for(@parish) do |f| %>
-  <label>Name<span style='color:red'>*</span></label>
-  <%= f.text_field :name, hide_label: :true %>
+<div class="authform">
+  <%= bootstrap_form_for(@parish) do |f| %>
+    <label>Name<span style='color:red'>*</span></label>
+    <%= f.text_field :name, hide_label: :true %>
 
-  <label>Pastor<span style='color:red'>*</span></label>
-  <%= f.text_field :pastor, hide_label: :true %>
+    <label>Pastor<span style='color:red'>*</span></label>
+    <%= f.text_field :pastor, hide_label: :true %>
 
-  <label>Administrator contact name<span style='color:red'>*</span></label>
-  <%= f.text_field :admin_name, hide_label: :true %>
+    <label>Administrator contact name<span style='color:red'>*</span></label>
+    <%= f.text_field :admin_name, hide_label: :true %>
 
-  <label>Administrator contact email<span style='color:red'>*</span></label>
-  <%= f.text_field :admin_email, hide_label: :true %>
+    <label>Administrator contact email<span style='color:red'>*</span></label>
+    <%= f.text_field :admin_email, hide_label: :true %>
 
-  <label>Administrator contact email type<span style='color:red'>*</span></label>
-  <%= f.select :admin_email_type, ['Home','Work'], include_blank: true, hide_label: :true%>
+    <label>Administrator contact email type<span style='color:red'>*</span></label>
+    <%= f.select :admin_email_type, ['Home','Work'], include_blank: true, hide_label: :true%>
 
-  <label>Administrator contact phone<span style='color:red'>*</span></label>
-  <%= f.text_field :admin_primary_phone, hide_label: :true %>
+    <label>Administrator contact phone<span style='color:red'>*</span></label>
+    <%= f.text_field :admin_primary_phone, hide_label: :true %>
 
-  <label>Administrator contact phone type<span style='color:red'>*</span></label>
-  <%= f.select :admin_primary_phone_type, ['Home','Cell','Work'], include_blank: true, hide_label: :true%>
+    <label>Administrator contact phone type<span style='color:red'>*</span></label>
+    <%= f.select :admin_primary_phone_type, ['Home','Cell','Work'], include_blank: true, hide_label: :true%>
 
-  <label>Address 1<span style='color:red'>*</span></label>
-  <%= f.text_field :address_1, hide_label: :true %>
+    <label>Address 1<span style='color:red'>*</span></label>
+    <%= f.text_field :address_1, hide_label: :true %>
 
-  <label>Address 2<span style='color:red'>*</span></label>
-  <%= f.text_field :address_2, hide_label: :true %>
+    <label>Address 2<span style='color:red'>*</span></label>
+    <%= f.text_field :address_2, hide_label: :true %>
 
-  <label>City<span style='color:red'>*</span></label>
-  <%= f.text_field :city, hide_label: :true %>
+    <label>City<span style='color:red'>*</span></label>
+    <%= f.text_field :city, hide_label: :true %>
 
-  <label>State<span style='color:red'>*</span></label>
-  <%= f.text_field :state, hide_label: :true %>
+    <label>State<span style='color:red'>*</span></label>
+    <%= f.text_field :state, hide_label: :true %>
 
-  <label>Zip<span style='color:red'>*</span></label>
-  <%= f.text_field :zip, hide_label: :true %>
+    <label>Zip<span style='color:red'>*</span></label>
+    <%= f.text_field :zip, hide_label: :true %>
 
-  <%= f.text_field :primary_phone %>
-  <%= f.select :primary_phone_type, ['Home','Cell','Work'], :selected => 'Cell'%>
-  <%= f.text_field :secondary_phone %>
-  <%= f.select :primary_phone_type, ['Home','Cell','Work'], :selected => 'Cell'%>
-  <%= f.email_field :email %>
-  <%= f.email_field :secondary_email %>
-  <%= f.primary "Create Parish" %>
-<% end %>
+    <%= f.text_field :primary_phone %>
+    <%= f.select :primary_phone_type, ['Home','Cell','Work'], :selected => 'Cell'%>
+    <%= f.text_field :secondary_phone %>
+    <%= f.select :primary_phone_type, ['Home','Cell','Work'], :selected => 'Cell'%>
+    <%= f.email_field :email %>
+    <%= f.email_field :secondary_email %>
+    <%= f.primary "Create Parish" %>
+  <% end %>
+</div>
+
+<!-- <div class="authform">
+  <%= form_for(Parish.new, :html => { :role => 'form'}) do |f| %>
+  <h3>New Parish</h3>
+
+  <div class="form-group">
+    <label>Name<span style='color: red'> *</span></label>
+    <%= f.text_field :name, autofocus: true, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <label>Pastor<span style='color: red'> *</span></label>
+    <%= f.text_field :pastor, class: 'form-control' %>
+  </div>
+
+  <%= f.submit 'Create New Parish and Sign Up', :class => 'button right' %>
+
+  <% end %>
+</div> -->

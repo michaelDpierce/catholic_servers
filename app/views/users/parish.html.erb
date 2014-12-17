@@ -1,0 +1,17 @@
+<div class="authform">
+  <%= form_for(Parish.new, :html => { :role => 'form'}) do |f| %>
+  <h3>New Parish</h3>
+
+    <div class="form-group">
+      <label>Name<span style='color: red'> *</span></label>
+      <%= f.text_field :name, autofocus: true, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <label>Pastor<span style='color: red'> *</span></label>
+      <%= f.text_field :pastor, class: 'form-control' %>
+    </div>
+
+    <%= f.submit 'Create New Parish and Sign Up', :class => 'button right' %>
+
+  <% end %>
+</div>
