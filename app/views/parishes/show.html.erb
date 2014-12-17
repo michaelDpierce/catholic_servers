@@ -1,4 +1,19 @@
-<p id="notice"><%= notice %></p>
-
-<%= link_to 'Edit', edit_parish_path(@parish) %> |
-<%= link_to 'Back', parishes_path %>
+<h3>Parish</h3>
+<p>Name: <%= @parish.name if @parish.name %></p>
+<p>Pastor: <%= @parish.pastor if @parish.pastor %></p>
+<p>Address 1: <%= @parish.address_1 if @parish.address_1 %></p>
+<p>Address 2: <%= @parish.address_2 if @parish.address_2 %></p>
+<p>City: <%= @parish.city if @parish.city %></p>
+<p>State: <%= @parish.state if @parish.state %></p>
+<p>Zip: <%= @parish.zip if @parish.zip %></p>
+<p>Primary Phone: <%= @parish.primary_phone if @parish.primary_phone %></p>
+<p>Primary Phone Type: <%= @parish.primary_phone_type if @parish.primary_phone_type %></p>
+<p>Secondary Phone: <%= @parish.secondary_phone if @parish.secondary_phone %></p>
+<p>Secondary Phone Type: <%= @parish.secondary_phone_type if @parish.secondary_phone_type %></p>
+<p>Email: <%= @parish.email if @parish.email %></p>
+<p>Secondary Email: <%= @parish.secondary_email if @parish.secondary_email %></p>
+<p>Administrator Contact Name: <%= @parish.admin_name if @parish.admin_name %></p>
+<p>Administrator Contact Email: <%= @parish.admin_email if @parish.admin_email %></p>
+<p>Administrator Contact Email Type: <%= @parish.admin_email_type if @parish.admin_email_type %></p>
+<p>Administrator Contact Phone: <%= @parish.admin_primary_phone if @parish.admin_primary_phone %></p>
+<p>Administrator Contact Phone Type: <%= @parish.admin_primary_phone_type if @parish.admin_primary_phone_type %></p>

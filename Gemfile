@@ -14,6 +14,7 @@ gem 'jquery-turbolinks'
 # Front End
 gem 'sass-rails', '~> 4.0.3'
 gem 'bootstrap-sass'
+gem 'bootstrap_form'
 
 # Angular
 gem 'angularjs-rails'

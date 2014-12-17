@@ -11,11 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141204214458) do
+ActiveRecord::Schema.define(version: 20141211213442) do
 
   create_table "parishes", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
+    t.string   "pastor"
+    t.string   "address_1"
+    t.string   "address_2"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.string   "primary_phone"
+    t.string   "primary_phone_type"
+    t.string   "secondary_phone"
+    t.string   "secondary_phone_type"
+    t.string   "email"
+    t.string   "secondary_email"
+    t.string   "admin_name"
+    t.string   "admin_email"
+    t.string   "admin_email_type"
+    t.string   "admin_primary_phone"
+    t.string   "admin_primary_phone_type"
   end
 
   create_table "users", force: true do |t|
@@ -38,7 +56,12 @@ ActiveRecord::Schema.define(version: 20141204214458) do
     t.string   "secondary_phone"
     t.string   "secondary_phone_type"
     t.string   "secondary_email"
-    t.string   "address"
+    t.string   "address_1"
+    t.string   "address_2"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.integer  "parish_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

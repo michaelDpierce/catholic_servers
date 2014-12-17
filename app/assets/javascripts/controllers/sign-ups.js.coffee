@@ -2,6 +2,6 @@
   '$scope'
 
   @SignUpsCtrl = ($scope) ->
-      $scope.signup =
-        step: 'One'
+    $scope.signup =
+      step: 'One'
 ]

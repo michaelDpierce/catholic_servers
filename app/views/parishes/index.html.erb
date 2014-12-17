@@ -1,23 +1,46 @@
-<h1>Listing parishes</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @parishes.each do |parish| %>
-      <tr>
-        <td><%= link_to 'Show', parish %></td>
-        <td><%= link_to 'Edit', edit_parish_path(parish) %></td>
-        <td><%= link_to 'Destroy', parish, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Parish', new_parish_path %>
+<div class="container">
+  <div class="row">
+    <h3>Parishes</h3>
+    <div class='pull-right'>
+      <%= link_to "/parishes/new", class:'btn btn class btn-primary' do %>
+        Add Parish
+      <% end %>
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Pastor</th>
+          <th>Address 1</th>
+          <th>Address 2</th>
+          <th>City</th>
+          <th>State</th>
+          <th>Zip</th>
+          <th>Primary Phone</th>
+          <th>Email</th>
+          <th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @parishes.each do |parish| %>
+        <tr>
+          <td><%= parish.name %></td>
+          <td><%= parish.pastor %></td>
+          <td><%= parish.address_1 %></td>
+          <td><%= parish.address_2 %></td>
+          <td><%= parish.city %></td>
+          <td><%= parish.state %></td>
+          <td><%= parish.zip %></td>
+          <td><%= parish.primary_phone %></td>
+          <td><%= parish.email %></td>
+          <td>
+            <%= link_to "/parishes/#{parish.id}" do %>
+            <i class="glyphicon glyphicon-share-alt"></i>
+            <% end %>
+          </td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

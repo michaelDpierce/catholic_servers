@@ -6,4 +6,9 @@
 <p>Primary Phone Type: <%= @user.primary_phone_type if @user.primary_phone_type %></p>
 <p>Secondary Phone: <%= @user.secondary_phone if @user.secondary_phone %></p>
 <p>Secondary Phone Type: <%= @user.secondary_phone_type if @user.secondary_phone_type %></p>
-<p>Address: <%= @user.address if @user.address %></p>
+<p>Address 1: <%= @user.address_1 if @user.address_1 %></p>
+<p>Address 2: <%= @user.address_2 if @user.address_2 %></p>
+<p>City: <%= @user.city if @user.city %></p>
+<p>State: <%= @user.state if @user.state %></p>
+<p>Zip: <%= @user.zip if @user.zip %></p>
+<p>Parish: <%= Parish.find_by_id(@user.parish_id).name if @user.parish_id %></p>

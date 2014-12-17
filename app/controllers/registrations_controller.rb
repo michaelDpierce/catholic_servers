@@ -1,9 +1,23 @@
-class Users::RegistrationsController < Devise::RegistrationsController
-  before_filter :configure_permitted_parameters
+class RegistrationsController < Devise::RegistrationsController
+  def new
+    super
+  end
 
-  protected
+  def create
+    # add custom create logic here
+  end
 
-  def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:sign_up).push(:first_name)
+  def update
+    super
+  end
+
+  private
+
+  def sign_up_params
+    params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation)
+  end
+
+  def account_update_params
+    params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :current_password)
   end
 end
